@@ -1,23 +1,15 @@
 package sample;
 
-import com.mycila.junit.concurrent.Concurrency;
 
-import com.mycila.junit.concurrent.ConcurrentJunitRunner;
-import com.sun.deploy.util.Waiter;
 import org.junit.After;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import junit.framework.Assert;
-import org.junit.runner.RunWith;
-import sample.PasswordHelper;
-import sample.User;
-import sample.UserManagement;
 
-import java.util.List;
+
 import java.util.Set;
 
-@RunWith(ConcurrentJunitRunner.class)
-@Concurrency
+
 public class UserManagementTest {
 
     private static String username1 = "usera";
