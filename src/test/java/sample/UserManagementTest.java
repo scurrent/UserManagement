@@ -16,20 +16,15 @@ public class UserManagementTest {
     private static String password1 = "passa";
     private static String username2 = "userb";
     private static String password2 = "passb";
+    private static String username3 = "userc";
+    private static String password3 = "passc";
 
     @BeforeClass
     public static void addSomeUsers(){
         UserManagement instance = new UserManagement();
         instance.addUser(username1, password1);
         instance.addUser(username2, password2);
-        instance.addUser("userc", "passc");
-
-        for(String user: instance.listUsers()){
-            System.out.println(user);
-        }
-
-
-
+        instance.addUser(username2, password3);
 
     }
 
@@ -76,13 +71,15 @@ public class UserManagementTest {
         String newUser= "newA";
         String newPassword= "newB";
 
-
         UserManagement instance = new UserManagement();
+        //add user
         Assert.assertTrue(instance.addUser(newUser, newPassword));
 
+        //verify they are in the list
         Set<String> myList = instance.listUsers();
         Assert.assertTrue(myList.contains(newUser));
 
+        //authenticate same user
         Assert.assertTrue(instance.authenticateUser(newUser, newPassword));
     }
 
