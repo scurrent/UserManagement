@@ -1,7 +1,8 @@
 package sample;
 
-//since I haven't worked much with multi-threading, this is just some code I wrote to try to se
-
+/* since I haven't worked much with multi-threading, this is just some code I wrote to try to see
+   how well my code would deal with multiple instances of the UserManagement class being created and accessed concurrently
+*/
 public class SingleThread implements Runnable {
 
     String name;
